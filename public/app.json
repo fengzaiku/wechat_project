@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/splash/splash",
+        "pages/board/board",
+        "pages/itemdetail/itemdetail"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#35495e",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "电影 豆瓣",
+        "backgroundColor": "#ffffff",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": true
+    }
+}

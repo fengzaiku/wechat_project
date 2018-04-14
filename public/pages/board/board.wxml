@@ -1,0 +1,19 @@
+<import src="../comman/comman.wxml"/>
+<view class="container">
+    <scroll-view class="scroll-view " scroll-y>
+        <swiper class="swiper-container"
+            indicator-dots="true"
+            autoplay="true" interval="1000" duration="500">
+            <block wx:for="{{boards.in_theaters.movies}}" wx:key="index">
+                <swiper-item>
+                    <image src="{{item.images.large}}" class="slide-image"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <template is="title-scroll" data="{{title:boards.coming_soon.title,movies:boards.coming_soon.movies}}"/>
+        <template is="title-list" data="{{title:boards.new_movies.title,movies:boards.new_movies.movies}}"/>
+        <template is="title-scroll" data="{{title:boards.top250.title,movies:boards.top250.movies}}"/>
+        <template is="title-subject" data="{{title:boards.weekly.title,movies:boards.weekly.movies}}"/>
+        <template is="title-subject" data="{{title:boards.us_box.title,movies:boards.us_box.movies}}"/>
+    </scroll-view>
+</view>

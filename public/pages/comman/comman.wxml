@@ -1,0 +1,62 @@
+
+<template name="title">
+    <view class="item-title">
+        <text>{{title}}</text>
+        <image src="../../image/arrowright.png" mode="aspectFill"></image>
+    </view>
+</template>
+
+
+<template name="title-scroll">
+    <view class="scroll-x-box mt-30">
+        <template is="title" data="{{title}}"/>
+        <scroll-view scroll-x class="scroll-hor">
+            <block wx:for="{{movies}}" wx:key="index">
+                <navigator url="../itemdetail/itemdetail?id={{ item.id }}" class="scroll-item">
+                    <image src="{{item.images.large}}"></image>
+                    <view>
+                            <text>{{item.title}}</text>
+                    </view>  
+                </navigator>  
+            </block>    
+        </scroll-view>   
+    </view>
+</template>
+
+
+<template name="title-list">
+    <view class=" mt-30">
+        <template is="title" data="{{title}}"/>    
+        <view class="flex-box">
+                <block wx:for="{{movies}}" wx:key="index">
+                    <navigator url="../itemdetail/itemdetail?id={{ item.id }}" class="scroll-item">
+                        <!-- <view class="scroll-item"> -->
+                            <image src="{{item.images.large}}"></image>
+                            <view>
+                                    <text>{{item.title}}</text>
+                            </view>
+                        <!-- </view>       -->
+                    </navigator>
+                </block>          
+            </view>                              
+        </view>        
+</template>
+
+
+<template name="title-subject">
+    <view class=" mt-30">
+        <template is="title" data="{{title}}"/>    
+        <view class="flex-box">
+            <block wx:for="{{movies}}" wx:key="index">
+                <navigator url="../itemdetail/itemdetail?id={{ item.subject.id }}" class="scroll-item">        
+                    <!-- <view class="scroll-item"> -->
+                        <image src="{{item.subject.images.large}}"></image>
+                        <view>
+                                <text>{{item.subject.title}}</text>
+                        </view>
+                    <!-- </view>    -->
+                </navigator>   
+            </block>          
+        </view>                              
+    </view>        
+</template>

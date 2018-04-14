@@ -1,0 +1,41 @@
+<view class="container">
+    <image wx:if="{{movies.images.large}}" src="{{movies.images.large}}" mode="aspectFill" class="item-detail-image"></image>
+    <scroll-view class="scroll-view " scroll-y>
+        <view class="moveis-express">
+            <image src="{{movies.images.large}}" mode="aspectFill"></image>
+            <view  class="title"><text>{{movies.title}} {{movies.year}}</text></view>
+            <view  class="info">
+                <text>评分：</text>
+                <text>{{ movies.rating.average }}</text>
+            </view>
+            <view class="info">
+                <text>时长：</text>
+                <text><block wx:for="{{movies.durations}}" wx:key="index">{{item}} </block></text>
+            </view>
+            <view class="info">
+                <text>分类：</text>
+                <text><block wx:for="{{movies.genres}}" wx:key="index">{{item}} </block></text>
+            </view>
+            <view class="info">
+                <text>主演：</text>
+                <text><block wx:for="{{movies.casts}}" wx:key="item">{{item.name}} </block></text>
+            </view>
+            <view class="info">
+                <text>导演：</text>
+                <text><block wx:for="{{movies.directors}}" wx:key="index">{{item.name}} </block></text>
+            </view>
+            <view class="info">
+                <text>语言：</text>
+                <text><block wx:for="{{movies.languages}}" wx:key="index">{{item}} </block></text>
+            </view>
+            <view class="info">
+                <text>标签：</text>
+                <text><block wx:for="{{movies.tags}}" wx:key="index">{{item}} </block></text>
+            </view>
+        </view>
+        <view class="summary">
+            <view><text>简介</text></view>
+            <view><text>{{movies.summary}}</text></view>
+        </view>
+    </scroll-view>
+</view>

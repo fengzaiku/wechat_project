@@ -1,0 +1,51 @@
+
+.scroll-hor{
+    height: 300rpx;
+    width: 100%;
+    display: block;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+.scroll-item{
+    width:160rpx;
+    margin: 10rpx;
+    display: inline-block;
+    height: 300rpx;
+}
+.scroll-item > image{
+    width: 100%;
+    height: 250rpx;
+}
+.scroll-item >view{
+    font-size: 18rpx;
+   line-height: 1.5;
+   text-align: center;
+   width: 100%;
+}
+.flex-box .scroll-item{
+    width: 160rpx;
+}
+.item-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height:40rpx; */
+    width: 100%;
+    font-size: 24rpx;
+    padding:20rpx;
+    box-sizing: border-box;
+}
+.item-title >image{
+   width:25rpx;
+   height:25rpx;
+}
+.flex-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    padding:0 20rpx;
+ }
