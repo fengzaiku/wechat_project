@@ -17,7 +17,8 @@ Page({
         })
     },
     jumpboard(){
-        wx.navigateTo({
+        // 这里不能用wx.navigateTo,在跳转到tabar页面时只能用wx.switchTab
+        wx.switchTab({
             url: '../board/board'
         })
     }

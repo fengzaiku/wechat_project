@@ -1,0 +1,13 @@
+.search-header{
+    position:fixed;
+    width:100%;
+    padding:10rpx;
+    box-sizing:border-box;
+    border-bottom:1px solid #eee;
+    height: 8vh;
+}
+.search-header > input{
+    text-align:center;
+}
+
+@import "../comman/comman.wxss"

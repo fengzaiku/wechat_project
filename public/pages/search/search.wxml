@@ -1,0 +1,7 @@
+<import src="../comman/comman.wxml"/>
+<view class="container">
+    <view class="search-header">
+        <input placeholder="请输入搜索内容" focus="true" auto-focus bindconfirm="handleClickSearch"/>
+    </view>
+    <template is="search-list" data="{{movies}}"/>
+</view>

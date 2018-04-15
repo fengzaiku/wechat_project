@@ -1,5 +1,6 @@
 App({
-    onLaunch(){},
+    onLaunch(){
+    },
     onShow(){},
     onHide(){}
 })

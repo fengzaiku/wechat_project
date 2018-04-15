@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="userInfo">
+        <image src="{{userInfo.avatarUrl}}"></image>
+        <view><text>{{userInfo.nickName}}</text></view>
+    </view>
+</view>

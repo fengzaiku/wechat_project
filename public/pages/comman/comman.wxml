@@ -60,3 +60,23 @@
         </view>                              
     </view>        
 </template>
+
+<template name="search-list">
+    <view scroll-y class="search-list">
+        <block wx:for="{{movies}}" wx:key="index">
+            <view class="list-result">
+                <image src="{{item.images.large}}" mode="aspectFill"></image>
+                <view class="search-express">
+                    <view class="search-title"><text>{{item.title}}</text></view>
+                    <view class="search-subtitle"><text>{{item.original_title}} ({{item.year}})</text></view>
+                    <view class="search-subtitle">
+                        <text>导演：<block wx:for="{{ item.directors }}" wx:key="index"> {{ item.name }} </block></text>
+                    </view>
+                </view>
+                <view class="search-pre">
+                    <text>6.0</text>
+                </view>
+            </view>
+        </block>
+    </view>
+</template>
