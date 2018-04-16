@@ -6,10 +6,7 @@ Page({
         let $this=this;
         wx.getUserInfo({
             success: function(res){
-                console.log(res)
-                console.log(res.userInfo)
                 $this.setData({userInfo:res.userInfo})
-                // success
             },
             fail: function() {
                 wx.showToast({
