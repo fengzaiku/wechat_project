@@ -15,8 +15,8 @@ app.use('/api',function(req,res,next){
     next();
 });
 app.use('/api',proxy({
-    target: 'https://api.douban.com/v2/movie',
-    // target: 'https://douban.uieee.com/v2/movie',
+    // target: 'https://api.douban.com/v2/movie',
+    target: 'https://douban.uieee.com/v2/movie',
     changeOrigin: true,
     logLevel:"info",
     pathRewrite: {"^/api" : ""}
